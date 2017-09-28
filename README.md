@@ -14,6 +14,8 @@ Got it started with:
 
 Get it setup with:
 
+* $ bundle
+
 * $ rails db:migrate
 
 Run it with:
