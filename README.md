@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple RESTful API backend built in Rails 5.
 
-Things you may want to cover:
+Got it started with:
 
-* Ruby version
+* $ rails new <appname> --api -T
 
-* System dependencies
+* $ rails g model Todo title:string complete:boolean owner:string
 
-* Configuration
+* $ rails db:migrate
 
-* Database creation
+* $ rails g controller Todos
 
-* Database initialization
+Get it setup with:
 
-* How to run the test suite
+* $ rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+Run it with:
 
-* Deployment instructions
-
-* ...
+* $ rails s -p 3001
