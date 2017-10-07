@@ -11,6 +11,7 @@ class TodosController < ApplicationController
 
   def create
     todo = Todo.new(todo_params)
+    
     if todo.save
       render json: todo
     else
@@ -29,14 +30,24 @@ class TodosController < ApplicationController
     todo.destroy
     render json: {message: "successfully deleted!"}, status: 200
   end
+
         
-    def todo_params
-      # whitelist params
-      params.permit(:id, :title, :owner, :complete)
+  def clear_complete
+    todos = Todo.where("complete = 't'")
+    todos.each do |todo|
+      todo.destroy
     end
-            
-    def set_todo
-      @todo = Todo.find(params[:id])
-    end
-  
+    render json: {message: "successfully cleaned!"}, status: 200
   end
+  
+  
+  def todo_params
+    # whitelist params
+    params.permit(:id, :title, :owner, :complete)
+  end
+            
+  def set_todo
+    @todo = Todo.find(params[:id])
+  end
+  
+end

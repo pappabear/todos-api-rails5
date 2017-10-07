@@ -1,6 +1,6 @@
 # README
 
-Simple RESTful API backend built in Rails 5.
+Simple RESTful API backend built in Rails 5.  Primary use is to provide a real API backend for projects where I'm figuring out React and Redux.
 
 Got it started with:
 
